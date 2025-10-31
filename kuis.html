@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis - Stop Bullying Now</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">No Bully Force 🚫</a>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Tes Pengetahuan Anti-Bullying</h2>
+    <form id="quizForm">
+  <ol>
+    <li class="mb-3">
+      <label>Apa itu bullying?</label>
+      <select class="form-select" name="q1">
+        <option value="">Pilih</option>
+        <option value="b">Tindakan menyakiti fisik atau mental seseorang</option>
+        <option value="a">Sekadar bercanda</option>
+        <option value="c">Main bersama</option>
+      </select>
+    </li>
+    <li class="mb-3">
+      <label>Bullying bisa terjadi di...</label>
+      <select class="form-select" name="q2">
+        <option value="">Pilih</option>
+        <option value="a">Sekolah dan dunia maya</option>
+        <option value="b">Hanya di dunia nyata</option>
+        <option value="c">Tidak ada hubungannya</option>
+      </select>
+    </li>
+    <li class="mb-3">
+      <label>Cyberbullying dilakukan melalui...</label>
+      <select class="form-select" name="q3">
+        <option value="">Pilih</option>
+        <option value="c">Media sosial atau internet</option>
+        <option value="a">Tatap muka langsung</option>
+        <option value="b">Televisi</option>
+      </select>
+    </li>
+    <li class="mb-3">
+      <label>Jika kamu melihat teman dibully, kamu harus...</label>
+      <select class="form-select" name="q4">
+        <option value="">Pilih</option>
+        <option value="a">Melaporkan ke guru/orang dewasa</option>
+        <option value="b">Diam saja</option>
+        <option value="c">Ikut menonton</option>
+      </select>
+    </li>
+    <li class="mb-3">
+      <label>Tujuan dari bullying adalah...</label>
+      <select class="form-select" name="q5">
+        <option value="">Pilih</option>
+        <option value="b">Menyakiti atau merendahkan orang lain</option>
+        <option value="a">Membantu teman</option>
+        <option value="c">Bermain</option>
+      </select>
+    </li>
+    <li class="mb-3">
+      <label>Dampak bullying bagi korban adalah...</label>
+      <select class="form-select" name="q6">
+        <option value="">Pilih</option>
+        <option value="a">Depresi dan kehilangan semangat belajar</option>
+        <option value="b">Menjadi lebih kuat</option>
+        <option value="c">Tidak ada dampak</option>
+      </select>
+    </li>
+    <li class="mb-3">
+      <label>Siapa yang bisa menghentikan bullying?</label>
+      <select class="form-select" name="q7">
+        <option value="">Pilih</option>
+        <option value="a">Semua orang</option>
+        <option value="b">Hanya guru</option>
+        <option value="c">Tidak ada</option>
+      </select>
+    </li>
+    <li class="mb-3">
+      <label>Contoh bullying verbal adalah...</label>
+      <select class="form-select" name="q8">
+        <option value="">Pilih</option>
+        <option value="a">Mengejek dan menghina teman</option>
+        <option value="b">Meminjam barang</option>
+        <option value="c">Memberi hadiah</option>
+      </select>
+    </li>
+    <li class="mb-3">
+      <label>Apa yang harus kamu lakukan jika kamu jadi korban?</label>
+      <select class="form-select" name="q9">
+        <option value="">Pilih</option>
+        <option value="b">Cerita ke guru/orang tua</option>
+        <option value="a">Membalas</option>
+        <option value="c">Diam dan sembunyi</option>
+      </select>
+    </li>
+    <li class="mb-3">
+      <label>Bullying dapat dicegah dengan...</label>
+      <select class="form-select" name="q10">
+        <option value="">Pilih</option>
+        <option value="a">Menanamkan empati dan menghargai perbedaan</option>
+        <option value="b">Membiarkan saja</option>
+        <option value="c">Ikut-ikutan</option>
+      </select>
+    </li>
+  </ol>
+  <button type="button" class="btn btn-primary" onclick="checkQuiz()">Lihat Hasil</button>
+  <p id="quizResult" class="mt-4 fw-bold"></p>
+</form>
+
+<script>
+  function checkQuiz() {
+    const answers = {
+      q1: "b", q2: "a", q3: "c", q4: "a", q5: "b",
+      q6: "a", q7: "a", q8: "a", q9: "b", q10: "a"
+    };
+    let score = 0;
+    const form = document.getElementById('quizForm');
+    for (let key in answers) {
+      if (form[key].value === answers[key]) score += 10;
+    }
+
+    let resultText = "";
+    if (score === 100) resultText = "🌟 Luar biasa! Kamu paham betul tentang anti-bullying!";
+    else if (score >= 80) resultText = "👏 Bagus sekali! Kamu sudah sangat peka terhadap bullying.";
+    else if (score >= 50) resultText = "🙂 Lumayan! Tapi masih perlu lebih banyak belajar dan peduli.";
+    else resultText = "😔 Yuk, belajar lagi agar kamu bisa membantu menghentikan bullying!";
+
+    document.getElementById('quizResult').textContent = `Skor kamu: ${score}/100 — ${resultText}`;
+  }
+</script>
+
+  </div>
+
+  <script src="js/script.js"></script>
+  <footer class="mt-5">
+  <div class="container text-center py-4">
+    <p class="fw-bold mb-1">No Bully Force 🚫</p>
+    <p class="mb-2">Hargai perbedaan, lawan perundungan.</p>
+    <div>
+      <a href="https://www.instagram.com/nobullyforce?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="me-3 text-decoration-none text-primary">Instagram</a>
+    </div>
+    <hr class="my-3">
+    <p class="mb-0">&copy; Kelompok 126 Perundungan | Dibuat dengan ❤️ untuk edukasi</p>
+  </div>
+</footer>
+
+</body>
+</html>

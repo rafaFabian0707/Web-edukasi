@@ -1,0 +1,176 @@
+/* ========== STYLE RETRO & CHILDHOOD THEME ========== */
+
+/* Font retro + lembut */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --soft-blue: #a6d8ff;
+  --light-blue: #d8efff;
+  --navy-blue: #005f99;
+  --pastel-yellow: #ffe599;
+  --soft-pink: #ffd6e8;
+  --white: #fff;
+  --gray: #555;
+}
+
+/* Global style */
+body {
+  font-family: 'Fredoka', 'Poppins', sans-serif;
+  background-color: var(--light-blue);
+  color: var(--gray);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--soft-blue) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: var(--navy-blue) !important;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  color: var(--navy-blue) !important;
+  font-weight: 500;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--white) !important;
+  background-color: var(--navy-blue);
+  border-radius: 10px;
+  padding: 5px 12px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--soft-blue), var(--pastel-yellow));
+  color: var(--navy-blue);
+  border-radius: 0 0 30px 30px;
+  box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.hero .btn {
+  background-color: var(--navy-blue);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: 600;
+  color: var(--white);
+  transition: transform 0.2s;
+}
+
+.hero .btn:hover {
+  transform: scale(1.05);
+  background-color: #004b7a;
+}
+
+/* Card styles (untuk edukasi, kisah, dll) */
+.card {
+  background-color: var(--white);
+  border: 3px solid var(--soft-blue);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 95, 153, 0.15);
+}
+
+/* Headings */
+h2, h5 {
+  color: var(--navy-blue);
+  font-weight: 600;
+}
+
+/* Form (laporkan, kuis) */
+form {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 20px;
+  border: 2px solid var(--soft-blue);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--navy-blue);
+}
+
+.form-control, .form-select {
+  border: 2px solid var(--soft-blue);
+  border-radius: 15px;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--navy-blue);
+  box-shadow: 0 0 5px rgba(0, 95, 153, 0.3);
+}
+
+button.btn-primary, button.btn-danger {
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--navy-blue);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #004b7a;
+}
+
+.btn-danger {
+  background-color: #ff6b6b;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #e25a5a;
+}
+
+/* Chart canvas styling */
+canvas {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid var(--soft-blue);
+}
+
+/* Blockquote (kisah nyata) */
+blockquote {
+  font-style: italic;
+  color: #333;
+  border-left: 6px solid var(--navy-blue);
+  padding-left: 15px;
+}
+
+/* Footer (optional kalau mau tambahkan nanti) */
+footer {
+  background: var(--soft-blue);
+  color: var(--navy-blue);
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid var(--navy-blue);
+  font-size: 0.9rem;
+}
